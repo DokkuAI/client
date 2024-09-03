@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="w-full h-[10vh] flex items-center justify-between px-8 shadow-[0_9px_9px_0_#1A181E0A]">
+    <div className="w-full h-[64px] flex items-center justify-between px-8 shadow-[0_9px_9px_0_#1A181E0A]">
       <div className="text-2xl">LOGO</div>
       <div className="w-[50px] flex justify-between items-center">
         <svg

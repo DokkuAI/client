@@ -1,20 +1,25 @@
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+import { manRope } from "@/ui/fonts";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          socialButtonsPlacement: "bottom",
+        },
+        elements: {
+          formButtonPrimary: "bg-[#2D66F5]",
+        },
+      }}
+    >
       <html lang="en">
-        <body className=" h-screen w-full">{children}</body>
+        <body className={`${manRope.className} h-auto w-full`}>{children}</body>
       </html>
     </ClerkProvider>
   );
