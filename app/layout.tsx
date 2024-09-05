@@ -1,6 +1,11 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import "./globals.css";
-import { manRope } from "@/ui/fonts";
+import "@/styles/globals.css";
+import { Manrope } from "next/font/google";
+
+const manRope = Manrope({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
