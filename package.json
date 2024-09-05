@@ -9,10 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tiptap-pro/extension-mathematics": "^2.11.2",
+    "@tiptap/extension-horizontal-rule": "^2.6.6",
     "clsx": "^2.1.1",
+    "katex": "^0.16.11",
     "next": "14.2.6",
+    "novel": "^0.1.22",
+    "pdfjs-dist": "^3.4.120",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-resizable-panels": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "^20",
