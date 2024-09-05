@@ -1,9 +1,8 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import PlusIcon from "@/public/Plus.svg";
+import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
-  const router = useRouter();
   return (
     <div className="flex flex-col items-center gap-[13px]  text-[#171A1F] text-center">
       <div className="text-[28px] leading-[42px] font-bold">
@@ -34,41 +33,18 @@ const Page = () => {
           />
         </div>
         <div className="flex items-center gap-[11px]">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 2.28564L8 13.7142"
-              stroke="#9095A0"
-              stroke-width="1.37143"
-              stroke-miterlimit="10"
-              stroke-linecap="square"
-            />
-            <path
-              d="M13.7142 8L2.28564 8"
-              stroke="#9095A0"
-              stroke-width="1.37143"
-              stroke-miterlimit="10"
-              stroke-linecap="square"
-            />
-          </svg>
+          <Image src={PlusIcon} alt="" />
           <div className="text-[#9095A0] text-[16px] leading-[26px] font-normal">
             Add more
           </div>
         </div>
       </div>
-      <button
-        onClick={() => {
-          router.push("/sign-up/welcome");
-        }}
-        className="mb:w-[374px] w-[280px] h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF]"
+      <Link
+        href="/sign-up/welcome"
+        className=" flex items-center justify-center mb:w-[374px] w-[280px] h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF]"
       >
         Continue
-      </button>
+      </Link>
     </div>
   );
 };
