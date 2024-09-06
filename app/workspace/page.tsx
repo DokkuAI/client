@@ -5,7 +5,7 @@ import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 import PdfBar from "./ui/PdfBar";
 import UtilityBar from "./ui/UtilityBar";
 import { useState } from "react";
-import PdfView from "./ui/PdfView";
+import FileView from "./ui/FileView";
 
 export default function Page() {
   const [chat, setChat] = useState<boolean>(false);
@@ -32,7 +32,7 @@ export default function Page() {
           minSize={20}
           collapsible={true}
         >
-          <PdfView />
+          <FileView />
         </Panel>
         {comment ? (
           <>
