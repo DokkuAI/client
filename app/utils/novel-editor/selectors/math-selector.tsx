@@ -1,4 +1,4 @@
-import { Button } from "../../ui/button";
+import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { SigmaIcon } from "lucide-react";
 import { useEditor } from "novel";

@@ -1,16 +1,24 @@
 "use client";
 
-import NotesEditor from "./ui/NotesEditor";
+import Editor from "./ui/NotesEditor";
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 import PdfBar from "./ui/PdfBar";
 import UtilityBar from "./ui/UtilityBar";
 import { useState } from "react";
-import FileView from "./ui/FileView";
+import FileView from "./ui/PdfView";
+import { JSONContent } from "novel";
 
 export default function Page() {
   const [chat, setChat] = useState<boolean>(false);
   const [comment, setComment] = useState<boolean>(false);
   const [note, setNote] = useState<boolean>(false);
+  // TODO: Check this
+  const [noteContent, setNoteContent] = useState<JSONContent | null>(null);
+
+  const handleNoteChange = (content: JSONContent) => {
+    setNoteContent(content);
+  };
+  // Check this
 
   return (
     <div className="h-dvh flex  flex-col">
@@ -22,16 +30,12 @@ export default function Page() {
           comment={comment}
           setComment={setComment}
           note={note}
-          setNote={setNote}
+          setNote={setNoteContent}
         />
       </div>
 
       <PanelGroup direction="horizontal" className="flex flex-grow">
-        <Panel
-          defaultSize={30}
-          minSize={20}
-          collapsible={true}
-        >
+        <Panel defaultSize={30} minSize={20} collapsible={true}>
           <FileView />
         </Panel>
         {comment ? (
@@ -75,7 +79,7 @@ export default function Page() {
               minSize={20}
               collapsible={true}
             >
-              <NotesEditor/>
+              <Editor onChange={handleNoteChange} />
             </Panel>
           </>
         ) : null}
