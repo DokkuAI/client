@@ -11,19 +11,16 @@ import {
   EditorBubble,
 } from "novel";
 import { ImageResizer, handleCommandNavigation } from "novel/extensions";
-import { defaultExtensions } from "../../utils/novel-editor/extensions";
-import { NodeSelector } from "../../utils/novel-editor/selectors/node-selector";
-import { LinkSelector } from "../../utils/novel-editor/selectors/link-selector";
-import { ColorSelector } from "../../utils/novel-editor/selectors/color-selector";
-import { MathSelector } from "../../utils/novel-editor/selectors/math-selector";
-import { TextButtons } from "../../utils/novel-editor/selectors/text-buttons";
-import {
-  slashCommand,
-  suggestionItems,
-} from "../../utils/novel-editor/slash-command";
+import { defaultExtensions } from "./extensions";
+import { NodeSelector } from "./selectors/node-selector";
+import { LinkSelector } from "./selectors/link-selector";
+import { ColorSelector } from "./selectors/color-selector";
+import { MathSelector } from "./selectors/math-selector";
+import { TextButtons } from "./selectors/text-buttons";
+import { slashCommand, suggestionItems } from "./slash-command";
 import { handleImageDrop, handleImagePaste } from "novel/plugins";
-import { uploadFn } from "../../utils/novel-editor/image-upload";
-import { Separator } from "../../utils/novel-editor/ui/separator";
+import { uploadFn } from "./image-upload";
+import { Separator } from "./ui/separator";
 
 const extensions = [...defaultExtensions, slashCommand];
 
