@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   EditorRoot,
   EditorCommand,
@@ -11,19 +11,17 @@ import {
   EditorBubble,
 } from "novel";
 import { ImageResizer, handleCommandNavigation } from "novel/extensions";
-import { defaultExtensions } from "../../utils/novel-editor/extensions";
-import { NodeSelector } from "../../utils/novel-editor/selectors/node-selector";
-import { LinkSelector } from "../../utils/novel-editor/selectors/link-selector";
-import { ColorSelector } from "../../utils/novel-editor/selectors/color-selector";
-import { MathSelector } from "../../utils/novel-editor/selectors/math-selector";
-import { TextButtons } from "../../utils/novel-editor/selectors/text-buttons";
-import {
-  slashCommand,
-  suggestionItems,
-} from "../../utils/novel-editor/slash-command";
+import { defaultExtensions } from "./lib/extensions";
+import { NodeSelector } from "./components/selectors/node-selector";
+import { LinkSelector } from "./components/selectors/link-selector";
+import { ColorSelector } from "./components/selectors/color-selector";
+
+import { TextButtons } from "./components/selectors/text-buttons";
+import { slashCommand, suggestionItems } from "./components/ui/slash-command";
 import { handleImageDrop, handleImagePaste } from "novel/plugins";
-import { uploadFn } from "../../utils/novel-editor/image-upload";
-import { Separator } from "../../utils/novel-editor/ui/separator";
+import { uploadFn } from "./lib/image-upload";
+import { Separator } from "./components/ui/separator";
+import { MathSelector } from "./components/selectors/math-selector";
 
 const extensions = [...defaultExtensions, slashCommand];
 
@@ -39,7 +37,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
   return (
     <EditorRoot>
       <EditorContent
-        className="border p-4 rounded-xl"
+        className="border p-8 rounded-xl"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{

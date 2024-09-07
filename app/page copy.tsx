@@ -1,6 +1,6 @@
 "use client";
 
-import Editor from "./(editor)/Editor";
+import Editor from "./(editor)/components/editor/Editor";
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 import PdfBar from "./ui/PdfBar";
 import UtilityBar from "./ui/UtilityBar";
@@ -81,7 +81,7 @@ export default function Page() {
               minSize={20}
               collapsible={true}
             >
-              <div className="flex flex-col p-2 border w-full gap-6 rounded-md bg-card">
+              <div className="flex flex-col p-6 border w-full gap-6 rounded-md bg-card">
                 <Editor
                   initialValue={noteContent}
                   onChange={handleNoteChange}

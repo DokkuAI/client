@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { useEditor } from "novel";
 import { Check, Trash } from "lucide-react";
 import {

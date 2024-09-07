@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { SigmaIcon } from "lucide-react";
 import { useEditor } from "novel";
 
@@ -19,7 +19,6 @@ export const MathSelector = () => {
         } else {
           const { from, to } = editor.state.selection;
           const latex = editor.state.doc.textBetween(from, to);
-          console.log({ latex });
 
           if (!latex) return;
 

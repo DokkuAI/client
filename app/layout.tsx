@@ -1,5 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import "@/styles/globals.css";
+import "./globals.css";
+import "./prosemirror.css"
 import { Manrope } from "next/font/google";
 
 const manRope = Manrope({
