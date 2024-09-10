@@ -19,7 +19,7 @@
 }
 
 .gutter.gutter-horizontal {
-    background-image: url('../public/ResizeHandleIcon.svg');
+    /* background-image: url('../public/ResizeHandleIcon.svg'); */
     cursor: col-resize;
     
 }
