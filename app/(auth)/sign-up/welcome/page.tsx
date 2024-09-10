@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "../ui/Button";
 
 const Page = () => {
   return (
@@ -18,12 +18,7 @@ const Page = () => {
         alt="signup-welocme-hero"
         className=" mt-[9px] mb-[20px]"
       />
-      <Link
-        href="/"
-        className="mb:w-[374px] w-[280px] h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF] flex items-center justify-center "
-      >
-        Continue
-      </Link>
+      <Button href='/' />
     </div>
   );
 };

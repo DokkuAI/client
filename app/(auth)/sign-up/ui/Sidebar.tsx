@@ -3,16 +3,22 @@
 import { SideCard } from "./SideCard";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Details, Invite, Verify, Welcome } from "./Svg";
+import {
+  DetailsIcon,
+  InviteIcon,
+  VerifyIcon,
+  WelcomeIcon,
+  WorkspaceIcon,
+} from "./Svg";
 
 export default function Sidebar() {
   const path = usePathname();
 
   return (
-    <div className="flex flex-col justify-between h-auto bg-[#F7F7F5] hidden lg:flex pt-[116px] pb-4 min-w-[380px] px-[21px]">
+    <div className="flex flex-col justify-between h-auto bg-[#F7F7F5] hidden lg:flex pt-[116px] pb-4 min-w-[400px] px-[21px]">
       <div>
         <SideCard
-          svg={<Details path={path} route="/sign-up" />}
+          svg={<DetailsIcon path={path} route="/sign-up" />}
           path={path}
           route="/sign-up"
           title="Your details"
@@ -20,7 +26,7 @@ export default function Sidebar() {
         />
         <BlueLine />
         <SideCard
-          svg={<Verify path={path} route="/sign-up/verify-email-address" />}
+          svg={<VerifyIcon path={path} route="/sign-up/verify-email-address" />}
           path={path}
           route="/sign-up/verify-email-address"
           title="Verify your email"
@@ -28,7 +34,15 @@ export default function Sidebar() {
         />
         <BlueLine />
         <SideCard
-          svg={<Invite path={path} route="/sign-up/invite" />}
+          svg={<WorkspaceIcon path={path} route="/sign-up/create-workspace" />}
+          path={path}
+          route="/sign-up/create-workspace"
+          title="Create your workspace"
+          description="create your workspace to work better"
+        />
+        <BlueLine />
+        <SideCard
+          svg={<InviteIcon path={path} route="/sign-up/invite" />}
           path={path}
           route="/sign-up/invite"
           title="Invite your team"
@@ -36,7 +50,7 @@ export default function Sidebar() {
         />
         <BlueLine />
         <SideCard
-          svg={<Welcome path={path} route="/sign-up/welcome" />}
+          svg={<WelcomeIcon path={path} route="/sign-up/welcome" />}
           path={path}
           route="/sign-up/welcome"
           title="Welcome to DokkuAI"
