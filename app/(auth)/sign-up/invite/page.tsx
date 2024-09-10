@@ -1,6 +1,6 @@
 import PlusIcon from "@/public/Plus.svg";
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "../ui/Button";
 
 const Page = () => {
   return (
@@ -39,12 +39,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <Link
-        href="/sign-up/welcome"
-        className=" flex items-center justify-center mb:w-[374px] w-[280px] h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF]"
-      >
-        Continue
-      </Link>
+      <Button href='/sign-up/welcome' />
     </div>
   );
 };
