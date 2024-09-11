@@ -11,7 +11,7 @@ import { JSONContent } from "novel";
 export default function Page() {
   const [chat, setChat] = useState<boolean>(false);
   const [comment, setComment] = useState<boolean>(false);
-  const [note, setNote] = useState<boolean>(true);
+  const [note, setNote] = useState<boolean>(false);
 
   const [noteContent, setNoteContent] = useState<JSONContent>({
     type: "doc",
@@ -23,7 +23,7 @@ export default function Page() {
   };
 
   return (
-    <div className="h-dvh flex  flex-col">
+    <div className="h-dvh flex  flex-col ">
       <div className="w-full flex">
         <PdfBar />
         <UtilityBar
