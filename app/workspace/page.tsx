@@ -24,7 +24,7 @@ export default function Page() {
   };
 
   return (
-    <div className="h-dvh flex  flex-col">
+    <div className="h-dvh flex  flex-col ">
       <div className="w-full flex">
         <PdfBar />
         <UtilityBar
