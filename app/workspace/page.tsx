@@ -7,11 +7,12 @@ import UtilityBar from "./ui/UtilityBar";
 import { useState } from "react";
 import FileView from "./(file-renderer)/FileView";
 import { JSONContent } from "novel";
+import CommentBox from "./(comment)/CommentBox";
 
 export default function Page() {
   const [chat, setChat] = useState<boolean>(false);
-  const [comment, setComment] = useState<boolean>(false);
-  const [note, setNote] = useState<boolean>(true);
+  const [comment, setComment] = useState<boolean>(true);
+  const [note, setNote] = useState<boolean>(false);
 
   const [noteContent, setNoteContent] = useState<JSONContent>({
     type: "doc",
@@ -49,9 +50,7 @@ export default function Page() {
               minSize={20}
               collapsible={true}
             >
-              <div className="flex-grow bg-blue-500 flex items-center  justify-center">
-                comments
-              </div>
+              <CommentBox />
             </Panel>
           </>
         ) : null}
