@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+.split {
+    display: flex;
+    flex-direction: row;
+}
+
+.gutter {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 10px !important;
+}
+
+.gutter:hover, .gutter:active {
+    background-color: rgba(49, 49, 233, 0.934);
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('../public/ResizeHandleIcon.svg');
+    cursor: col-resize;
+    
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
