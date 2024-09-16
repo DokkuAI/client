@@ -4,7 +4,7 @@ import SendIcon from "@/public/SendIcon.svg";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 
-const InputBox = ({ setCmnts }: any) => {
+const InputBox = ({ setCmnts, placeholder }: any) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data: any) =>
     setCmnts((cmnts: any) => [
@@ -20,11 +20,12 @@ const InputBox = ({ setCmnts }: any) => {
     ]);
   return (
     <form
-      className="w-full border-2 border-[#2D66F5] h-[74px] flex gap-4 items-center px-5 rounded"
+      className="w-full border-2 border-[#2D66F5] h-[74px] flex gap-4 items-center px-5 rounded py-2"
       onSubmit={handleSubmit(onSubmit)}
     >
       <Textarea
-        placeholder="Ask the document a question..."
+        className="min-h-[60px] max-h-[60px]"
+        placeholder={placeholder}
         {...register("inputText")}
       />
       <div className="flex items-center gap-2">

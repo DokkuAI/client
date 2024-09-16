@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.440.0",
     "@clerk/nextjs": "^5.4.1",
     "@cyntler/react-doc-viewer": "^1.17.0",
     "@pdftron/pdfjs-express-viewer": "^8.7.5",
@@ -21,9 +26,6 @@
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@react-pdf-viewer/drop": "^3.12.0",
     "@tailwindcss/typography": "^0.5.10",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.244.0",
     "next": "14.2.6",
     "novel": "^0.5.0",
     "pdfjs-dist": "^3.4.120",

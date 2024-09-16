@@ -11,6 +11,7 @@ import MagicWandIcon from "@/public/MagicWand.svg"
 import SearchContentIcon from "@/public/SearchContent.svg" 
 import ShootingStarIcon from "@/public/ShootingStar.svg"
 import AlignBottomIcon from "@/public/AlignBottom.svg"
+import InputBox from "../ui/InputBox";
 
 function Chat() {
     const messageContainer = useRef(null);
@@ -45,23 +46,7 @@ function Chat() {
           alt="align bottom icon"
         />
       </div>
-      <form
-        className="w-full border-2 border-[#2D66F5] h-[74px] flex gap-4 items-center px-5 rounded"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <Textarea
-          placeholder="Ask the document a question..."
-          {...register("inputText")}
-        />
-        <div className="flex items-center gap-2">
-          <button className="w-5 h-5">
-            <Image src={MicrophoneIcon} alt="mic icon" />
-          </button>
-          <button type="submit" className="w-5 h-5">
-            <Image src={SendIcon} alt="send icon" />
-          </button>
-        </div>
-      </form>
+      <InputBox placeholder="Ask the document a question..." />
     </div>
   );
 }
