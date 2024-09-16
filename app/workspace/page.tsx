@@ -7,6 +7,7 @@ import UtilityBar from "./ui/UtilityBar";
 import { useState } from "react";
 import FileView from "./(file-renderer)/FileView";
 import { JSONContent } from "novel";
+import CommentBox from "./(comment)/CommentBox";
 import Chat from "./(chat)/Chat";
 
 export default function Page() {
@@ -50,9 +51,7 @@ export default function Page() {
               minSize={20}
               collapsible={true}
             >
-              <div className="flex-grow bg-blue-500 flex items-center  justify-center">
-                comments
-              </div>
+              <CommentBox />
             </Panel>
           </>
         ) : null}
