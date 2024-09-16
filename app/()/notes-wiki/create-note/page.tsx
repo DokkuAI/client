@@ -87,7 +87,7 @@ const page = () => {
         </div>
         <Textarea
           placeholder="Add a note..."
-          className="mt-6 placeholder:text-[#171A1F] bg-[#F3F4F6]"
+          className="mt-6 placeholder:text-[#171A1F] bg-[#F3F4F6] min-h-[80px] max-h-[80px]"
         />
       </div>
     </div>
