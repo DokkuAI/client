@@ -18,7 +18,7 @@ const Upload = () => {
           PDF, Docx, Links. Max 10MB each.
         </div>
         <div className="h-[200px] border-dashed border-2 rounded-lg mt-4 mb-7 border-[#1D2128]"></div>
-        <Comp />
+        <UploadFiles />
       </div>
     </div>
   );
@@ -27,7 +27,7 @@ const Upload = () => {
 export default Upload;
 
 
-function Comp() {
+function UploadFiles() {
   return (
     <>
       <div className="text-[14px] leading-[22px] text-[#565E6C] font-normal text-left">

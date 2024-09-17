@@ -16,6 +16,7 @@ import {
 import { createSuggestionItems } from "novel/extensions";
 import { Command, renderItems } from "novel/extensions";
 import { uploadFn } from "../../lib/image-upload";
+import { string } from "zod";
 
 export const suggestionItems = createSuggestionItems([
   {
@@ -159,7 +160,7 @@ export const suggestionItems = createSuggestionItems([
     searchTerms: ["video", "youtube", "embed"],
     icon: <Youtube size={18} />,
     command: ({ editor, range }) => {
-      const videoLink = prompt("Please enter Youtube Video Link");
+      const videoLink = prompt("Please enter Youtube Video Link") ?? "";
       //From https://regexr.com/3dj5t
       const ytregex = new RegExp(
         /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/
@@ -187,7 +188,7 @@ export const suggestionItems = createSuggestionItems([
     searchTerms: ["twitter", "embed"],
     icon: <Twitter size={18} />,
     command: ({ editor, range }) => {
-      const tweetLink = prompt("Please enter Twitter Link");
+      const tweetLink = prompt("Please enter Twitter Link") ?? "";
       const tweetRegex = new RegExp(
         /^https?:\/\/(www\.)?x\.com\/([a-zA-Z0-9_]{1,15})(\/status\/(\d+))?(\/\S*)?$/
       );

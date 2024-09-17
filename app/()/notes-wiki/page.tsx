@@ -1,25 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import OtherTypeIcon from "@/public/OtherType.svg";
-import PdfTypeIcon from "@/public/PdfType.svg";
-import LinkTypeIcon from "@/public/LinkType.svg";
-import ThreeDotIcon from "@/public/ThreeDot.svg";
 import UploadIcon from "@/public/Upload.svg";
 import SearchIcon from "@/public/Search.svg";
 import FilterIcon from "@/public/Filter.svg";
 import ViewIcon from "@/public/View.svg";
-import OtherSourcesIcon from "@/public/OtherSources.svg";
 import AllFilesIcon from "@/public/AllFiles.svg";
 import LinkedNotesIcon from "@/public/LinkedNotes.svg";
 import EditIcon from "@/public/Edit.svg";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Notes from "./ui/Notes";

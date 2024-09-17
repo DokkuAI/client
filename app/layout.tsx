@@ -1,12 +1,12 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import "./prosemirror.css"
-import { Manrope } from "next/font/google";
+// import { Manrope } from "next/font/google";
 
-const manRope = Manrope({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const manRope = Manrope({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
 
 export default function RootLayout({
   children,
@@ -25,7 +25,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={`${manRope.className} h-auto w-full`}>{children}</body>
+        <body className={`h-auto w-full`}>{children}</body>
       </html>
     </ClerkProvider>
   );
