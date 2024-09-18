@@ -1,4 +1,4 @@
-import Skeleton from "@/app/(auth)/sign-up/ui/Skeleton";
+import Skeleton from "@/components/ui/Skeleton";
 
 export default function Loader() {
   return <Skeleton />;

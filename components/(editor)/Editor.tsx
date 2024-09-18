@@ -37,7 +37,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
   return (
     <EditorRoot>
       <EditorContent
-        className="border p-8 rounded-xl h-full"
+        className="border p-8 rounded-xl flex-grow"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{
@@ -48,7 +48,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
           handleDrop: (view, event, _slice, moved) =>
             handleImageDrop(view, event, moved, uploadFn),
           attributes: {
-            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full`,
+            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full h-[500px] hover:border-2 `,
           },
         }}
         onUpdate={({ editor }) => {

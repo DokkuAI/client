@@ -1,6 +1,6 @@
 "use client";
 
-import Editor from "./(editor)/Editor";
+import Editor from "../../components/(editor)/Editor";
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 import PdfBar from "./ui/PdfBar";
 import UtilityBar from "./ui/UtilityBar";
