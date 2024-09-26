@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import "./prosemirror.css"
-import { Manrope } from "@next/font/google";
+import { Manrope } from "next/font/google";
 import React from "react";
 
 const manRope = Manrope({
@@ -24,7 +24,7 @@ export default function RootLayout({
           formButtonPrimary: "bg-[#2D66F5]",
         },
       }}
-        signUpFallbackRedirectUrl={'/'}
+        signUpFallbackRedirectUrl={'/sign-up/create-workspace/usage'}
         signInFallbackRedirectUrl={'/'}
     >
       <html lang="en">

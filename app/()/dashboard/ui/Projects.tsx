@@ -18,15 +18,15 @@ const Projects = () => {
       </TableHeader>
       <TableBody>
         <Row
-          name="Airsim Simulation Techniques"
+          name="Robotics"
           dateCreated="November 21, 2024"
           tags="$250.00"
-          createdBy="me"
+          createdBy="John"
         />
         <Row
-          name="Airsim Simulation Techniques"
-          dateCreated="November 21, 2024"
-          tags="$250.00"
+          name="Telepathy"
+          dateCreated="June 2, 2024"
+          tags="-"
           createdBy="me"
         />
       </TableBody>

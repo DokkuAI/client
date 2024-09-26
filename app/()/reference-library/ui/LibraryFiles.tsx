@@ -11,7 +11,7 @@ const LibraryFiles = () => {
     getLibraryFiles();
     async function getLibraryFiles() {
       const { data } = await axios.get("http://localhost:8080/v1/library");
-      setFiles(data.slice(0,9));
+      setFiles(data.slice(0,8));
     }
   }, [dlt]);
   return (

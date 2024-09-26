@@ -10,7 +10,7 @@ const ProjectCards = ({ pinned }: { pinned: boolean }) => {
     getProjectFiles();
     async function getProjectFiles() {
       const { data } = await axios.get("http://localhost:8080/v1/library");
-      pinned?   setFiles(data.slice(0, 3)):   setFiles(data.slice(0,5));
+      pinned?   setFiles(data.slice(5, 8)):   setFiles(data.slice(0,5));
 
     }
   }, [pinned]);
@@ -20,7 +20,7 @@ const ProjectCards = ({ pinned }: { pinned: boolean }) => {
         return <Card
           key={index}
           pinned={pinned}
-          name={file.author || "devesh"}
+          name={file.author || "me"}
           date={file.createdAt || "-"}
           title={file.name || "Telepathy"}
           avatar="/Avatar.png"

@@ -12,7 +12,7 @@ const NotesFiles = () => {
     getLibraryFiles();
     async function getLibraryFiles() {
       const { data } = await axios.get("http://localhost:8080/v1/notes");
-      setNotes(data.slice(0, 9));
+      setNotes(data.slice(0, 8));
     }
   }, [dlt]);
   return (

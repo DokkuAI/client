@@ -14,7 +14,7 @@ const page = () => {
             Recently Viewed
           </div>
           <div className="flex gap-5">
-            <ProjectCards pinned={false}/>
+            <ProjectCards pinned={false} />
           </div>
         </div>
         <div className="flex flex-col gap-5">
@@ -22,7 +22,7 @@ const page = () => {
             Pinned
           </div>
           <div className="flex gap-5">
-            <ProjectCards pinned={true}/>
+            <ProjectCards pinned={true} />
           </div>
         </div>
         <div className="flex flex-col gap-5">
@@ -43,7 +43,7 @@ const page = () => {
         </div>
         <div className="flex-grow w-full">
           <Log
-            name="Devesh Singh"
+            name="Anuj"
             date="16:00 - Sep 25, 2022"
             title="Created Workspace for managing research"
             avatar="/Avatar.png"
@@ -51,33 +51,33 @@ const page = () => {
           />
           <BlueLine />
           <Log
-            name="Devesh Singh"
-            date="16:00 - Sep 25, 2022"
-            title="Created Workspace for managing research"
+            name="Rohit"
+            date="11:00 - Sep 26, 2022"
+            title="Imported  CV.pdf to workspace"
             avatar="/Avatar.png"
             svg={ActivityIcon}
           />
           <BlueLine />
           <Log
-            name="Devesh Singh"
-            date="16:00 - Sep 25, 2022"
-            title="Created Workspace for managing research"
+            name="Kiran"
+            date="16:00 - Sep 26, 2022"
+            title="Updated Workspace"
             avatar="/Avatar.png"
             svg={ActivityIcon}
           />
           <BlueLine />
           <Log
-            name="Devesh Singh"
+            name="Ravi"
             date="16:00 - Sep 25, 2022"
-            title="Created Workspace for managing research"
+            title="Created notes for CV.pdf file"
             avatar="/Avatar.png"
             svg={ActivityIcon}
           />
           <BlueLine />
           <Log
-            name="Devesh Singh"
+            name="John"
             date="16:00 - Sep 25, 2022"
-            title="Created Workspace for managing research"
+            title="Created notes with Telepathy.n file name"
             avatar="/Avatar.png"
             svg={ActivityIcon}
           />

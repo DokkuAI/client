@@ -6,10 +6,10 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 import { dropPlugin } from "@react-pdf-viewer/drop";
 import "@react-pdf-viewer/drop/lib/styles/index.css";
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function FileView({id}: {id: string}) {
-    const [pdfUrl, setPdfUrl] = useState('');
+    // const [pdfUrl, setPdfUrl] = useState('');
     // useEffect(()=>{
     //   getFileUrl(id);
     //   async function getFileUrl(id: string) {
