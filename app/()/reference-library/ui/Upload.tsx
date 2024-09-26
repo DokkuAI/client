@@ -1,15 +1,23 @@
+"use client";
+
 import RemoveIcon from "@/public/Remove.svg";
 import Image from "next/image";
-import CrossIcon from "@/public/Cross.svg"
+import CrossIcon from "@/public/Cross.svg";
 import { Progress } from "@/components/ui/progress";
-
+import UploadFile from "./UploadFile";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 const Upload = () => {
-  return (
-    <div className="w-full h-dvh flex items-center justify-center bg-[#171A1F66]">
-      <div className="flex flex-col bg-white w-2/5 min-w-[500px] px-6 pb-6 pt-3 gap-3 text-center">
+  const searchParams = useSearchParams();
+
+  return searchParams.get("showUpload") === "y" ? (
+    <div className="fixed w-full h-dvh -translate-x-50 -translate-y-50 z-10  bg-gray-800/50 flex justify-center items-center">
+      <div className="flex flex-col bg-white w-2/5 min-w-[500px] px-6 pb-6 pt-3 gap-3 text-center border-2 rounded-lg">
         <div className="flex justify-end cursor-pointer">
-          <Image src={RemoveIcon} alt="close icon" />
+          <Link href="/reference-library">
+            <Image src={RemoveIcon} alt="close icon" />
+          </Link>
         </div>
         <div className="text-[32px] leading-[48px] text-[#171A1F] font-bold w-full">
           Upload files
@@ -17,17 +25,17 @@ const Upload = () => {
         <div className="text-[14px] leading-[22px] text-[#565E6C] font-normal">
           PDF, Docx, Links. Max 10MB each.
         </div>
-        <div className="h-[200px] border-dashed border-2 rounded-lg mt-4 mb-7 border-[#1D2128]"></div>
-        <UploadFiles />
+        <div className="h-[200px] border-dashed border-2 rounded-lg mt-4 mb-7 border-[#1D2128] flex items-center justify-center">
+          <UploadFile/>
+        </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Upload;
 
-
-function UploadFiles() {
+function UploadProgress() {
   return (
     <>
       <div className="text-[14px] leading-[22px] text-[#565E6C] font-normal text-left">

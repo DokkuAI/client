@@ -1,10 +1,9 @@
 import ActivityIcon from "@/public/Activity.svg";
-
 import Projects from "./ui/Projects";
 import Button from "../ui/Button";
 import EditIcon from "@/public/Edit.svg";
-import ProjectCard from "./ui/ProjectCard";
 import { Log } from "./ui/Log";
+import ProjectCards from "./ui/ProjectCards";
 
 const page = () => {
   return (
@@ -15,30 +14,7 @@ const page = () => {
             Recently Viewed
           </div>
           <div className="flex gap-5">
-            <ProjectCard
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />{" "}
-            <ProjectCard
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />{" "}
-            <ProjectCard
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />{" "}
-            <ProjectCard
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />
+            <ProjectCards pinned={false}/>
           </div>
         </div>
         <div className="flex flex-col gap-5">
@@ -46,20 +22,7 @@ const page = () => {
             Pinned
           </div>
           <div className="flex gap-5">
-            <ProjectCard
-              pinned={true}
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />
-            <ProjectCard
-              pinned={true}
-              name="Devesh Singh"
-              date="16:00 - Sep 25, 2022"
-              title="Telepathy"
-              avatar="/Avatar.png"
-            />
+            <ProjectCards pinned={true}/>
           </div>
         </div>
         <div className="flex flex-col gap-5">

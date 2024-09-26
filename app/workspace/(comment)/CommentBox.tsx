@@ -17,7 +17,7 @@ const CommentBox = () => {
           return <Comment comment={comment} key={index} />;
         })}
       </div>
-      <InputBox placeholder="Write a comment" setCmnts={setCmnts} />
+      <InputBox placeholder="Write a comment" setInput={setCmnts} />
     </div>
   );
 };

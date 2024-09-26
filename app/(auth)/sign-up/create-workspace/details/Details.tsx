@@ -1,7 +1,10 @@
+"use client";
+
 import { string, z } from "zod";
-import { useForm } from "react-hook-form";
-import EngineerIcon from "@/public/EngineerIcon.svg"
-import Image from "next/image";
+// import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import axios from "axios";
 
 const Details = () => {
   const forSchema = z.object({
@@ -26,8 +29,25 @@ const Details = () => {
     ]),
     description: string().max(80).optional(),
   });
+  const router = useRouter();
 
   // const {register} = useForm();
+
+  async function handleSubmit(e: any) {
+    e.preventDefault();
+    // const formData = new FormData(e.target);
+    // const userData = {
+    //   work: formData.get("work"),
+    //   designation: formData.get("designation"),
+    //   size: formData.get("size"),
+    //   description: formData.get("description"),
+    // };
+    // await axios.patch(
+    //   "http://localhost:8080/v1/user/",
+    //   {about: userData}
+    // );
+    router.push("/sign-up/create-workspace/workspace");
+  }
 
   return (
     <div className="flex flex-col gap-[13px] text-[#171A1F] text-center items-center mx-4">
@@ -37,11 +57,15 @@ const Details = () => {
       <div className="text-[16px] leading-[26px] font-normal">
         This help us in knowing you better!
       </div>
-      <form className="mt-10 flex flex-col gap-4">
+      <form className="mt-10 flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col items-start gap-[5px]">
           <Title title="What kind of work you do?" />
-          <select className="  pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]">
-            <option value="" disabled selected hidden>
+          <select
+            defaultValue="default"
+            name="work"
+            className="pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]"
+          >
+            <option value="default" disabled hidden>
               Select your response
             </option>
             <option value="engineer">Engineer</option>
@@ -52,8 +76,12 @@ const Details = () => {
         </div>
         <div className="flex flex-col items-start gap-[5px]">
           <Title title="What's your role?" />
-          <select className="  pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]">
-            <option value="" disabled selected hidden>
+          <select
+            defaultValue="default"
+            name="designation"
+            className="  pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]"
+          >
+            <option value="default" disabled hidden>
               Select your response
             </option>
             <option value="executive">Executive (CXO level / VP)</option>
@@ -66,8 +94,12 @@ const Details = () => {
         </div>
         <div className="flex flex-col items-start gap-[5px]">
           <Title title="What's the size of your company?" />
-          <select className="  pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]">
-            <option value="" disabled selected hidden>
+          <select
+            defaultValue="default"
+            name="size"
+            className="  pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]"
+          >
+            <option value="default" disabled hidden>
               Select your response
             </option>
             <option value="0-1">0-1 employees</option>
@@ -83,16 +115,23 @@ const Details = () => {
         <div className="flex flex-col items-start gap-[5px]">
           <Title title="What's the size of your company?" />
           <input
+            name="description"
             className="py-[6px] pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]"
             type="text"
             placeholder="Write in less than 10 words"
           />
         </div>
         <div className="mt-9 flex gap-4 w-[285px] mb:w-[379px]">
-          <button className="w-3/5 h-[44px] bg-white rounded-lg text-[16px] leading-[26px] font-normal text-black flex items-center justify-center border-2 border-black">
+          <Link
+            href="/sign-up/create-workspace/usage"
+            className="w-3/5 h-[44px] bg-white rounded-lg text-[16px] leading-[26px] font-normal text-black flex items-center justify-center border-2 border-black"
+          >
             Back
-          </button>
-          <button className="w-full h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF] flex items-center justify-center ">
+          </Link>
+          <button
+            type="submit"
+            className="w-full h-[44px] bg-[#171A1F] rounded-lg text-[16px] leading-[26px] font-normal text-[#FFFFFF] flex items-center justify-center"
+          >
             Continue
           </button>
         </div>
@@ -103,12 +142,6 @@ const Details = () => {
 
 export default Details;
 
-
-function Title({title} : {title: string}) {
-
-  return (
-    <div className="text-[16px] leading-[26px] font-bold ">
-      {title}
-    </div>
-  );
+function Title({ title }: { title: string }) {
+  return <div className="text-[16px] leading-[26px] font-bold ">{title}</div>;
 }

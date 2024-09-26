@@ -15,7 +15,7 @@ export default function Sidebar() {
   const path = usePathname();
 
   return (
-    <div className="flex flex-col justify-between h-auto bg-[#F7F7F5] hidden lg:flex pt-[116px] pb-4 min-w-[400px] px-[21px]">
+    <div className="flex-col justify-between h-auto bg-[#F7F7F5] hidden lg:flex pt-[116px] pb-4 min-w-[400px] px-[21px]">
       <div>
         <SideCard
           svg={<DetailsIcon path={path} route="/sign-up" />}
@@ -36,7 +36,9 @@ export default function Sidebar() {
         <SideCard
           svg={<WorkspaceIcon path={path} route="/sign-up/create-workspace" />}
           path={path}
-          route="/sign-up/create-workspace"
+          route="/sign-up/create-workspace/usage"
+          route2="/sign-up/create-workspace/details"
+          route3="/sign-up/create-workspace/workspace"
           title="Create your workspace"
           description="create your workspace to work better"
         />
@@ -70,15 +72,15 @@ export default function Sidebar() {
               <path
                 d="M24 14L4 14"
                 stroke="#323842"
-                stroke-width="2.4"
-                stroke-miterlimit="10"
+                strokeWidth="2.4"
+                strokeMiterlimit="10"
               />
               <path
                 d="M11 21L4 14L11 7"
                 stroke="#323842"
-                stroke-width="2.4"
-                stroke-miterlimit="10"
-                stroke-linecap="square"
+                strokeWidth="2.4"
+                strokeMiterlimit="10"
+                strokeLinecap="square"
               />
             </svg>
           </Link>

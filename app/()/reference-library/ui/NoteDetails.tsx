@@ -8,7 +8,7 @@ import LinkTypeIcon from "@/public/LinkType.svg"
 import { Textarea } from "@/components/ui/textarea";
 import RemoveIcon from "@/public/Remove.svg"
 
-const NoteDetails = () => {
+const FileDetails = () => {
   return (
     <div className="w-full h-dvh flex items-center justify-center bg-[#171A1F66]">
       <div className="flex flex-col bg-white w-2/5 min-w-[500px] px-6 pb-6 pt-3 gap-2">
@@ -94,4 +94,4 @@ const NoteDetails = () => {
   );
 };
 
-export default NoteDetails;
+export default FileDetails;

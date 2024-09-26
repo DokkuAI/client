@@ -1,6 +1,6 @@
 import { Table, TableBody, TableHeader, TableRow } from "@/components/ui/table";
 import HeadCell from "../../ui/HeadCell";
-import Row from "./DocsRow";
+import LibraryFiles from "./LibraryFiles";
 
 export default function Library() {
   return (
@@ -19,87 +19,7 @@ export default function Library() {
       </TableHeader>
 
       <TableBody>
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
-        <Row
-          type="pdf"
-          title="Accurate structure prediction of ..."
-          year="2024"
-          authors="J. Abramson, J Adler, A. Dunger..."
-          source="International Journal of Oral Science"
-          tags="$250.00"
-          dateAdded="November 21, 2024"
-        />
+        <LibraryFiles/>
       </TableBody>
     </Table>
   );

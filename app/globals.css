@@ -15,7 +15,7 @@
 }
 
 .gutter:hover, .gutter:active {
-    background-color: rgba(49, 49, 233, 0.934);
+    background-color: gray;
 }
 
 .gutter.gutter-horizontal {

@@ -250,22 +250,22 @@ export function InviteIcon({ route, path }: svgInputs) {
           <path
             d="M16 36L36 36"
             stroke={path === route ? "#171A1F" : "#9095A0"}
-            stroke-width="2.4"
-            stroke-miterlimit="10"
-            stroke-linecap="square"
+            strokeWidth="2.4"
+            strokeMiterlimit="10"
+            strokeLinecap="square"
           />
           <path
             d="M23 31.0002L18 32.0002L19 27.0002L29.707 16.2932C30.098 15.9022 30.731 15.9022 31.121 16.2932L33.707 18.8793C34.098 19.2703 34.098 19.9033 33.707 20.2933L23 31.0002Z"
             stroke={path === route ? "#171A1F" : "#9095A0"}
-            stroke-width="2.4"
-            stroke-miterlimit="10"
-            stroke-linecap="square"
+            strokeWidth="2.4"
+            strokeMiterlimit="10"
+            strokeLinecap="square"
           />
           <path
             d="M27 19L31 23"
             stroke={path === route ? "#171A1F" : "#9095A0"}
-            stroke-width="2.4"
-            stroke-miterlimit="10"
+            strokeWidth="2.4"
+            strokeMiterlimit="10"
           />
         </g>
         <defs>

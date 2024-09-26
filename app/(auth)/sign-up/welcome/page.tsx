@@ -18,7 +18,7 @@ const Page = () => {
         alt="signup-welocme-hero"
         className=" mt-[9px] mb-[20px]"
       />
-      <Button href='/' />
+      <Button href='/dashboard' />
     </div>
   );
 };

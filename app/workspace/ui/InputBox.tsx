@@ -4,19 +4,19 @@ import SendIcon from "@/public/SendIcon.svg";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 
-const InputBox = ({ setCmnts, placeholder }: any) => {
+const InputBox = ({ setInput, placeholder }: any) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data: any) =>
-    setCmnts((cmnts: any) => [
+    setInput((cmnts: any) => [
+      ...cmnts,
       {
         name: "Devesh Singh",
         role: "DEV",
         src: "/Devesh.png",
         content: data.inputText,
         time: "Time",
-        replies: []
+        replies: [],
       },
-      ...cmnts,
     ]);
   return (
     <form

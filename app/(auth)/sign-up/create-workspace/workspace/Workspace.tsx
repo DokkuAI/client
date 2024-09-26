@@ -1,18 +1,32 @@
 "use client";
 
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import axios from "axios";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 const Workspace = () => {
+  const router = useRouter();
 
+  const [name, setName] = useState("");
+  const [display, setDisplay] = useState<boolean>(false);
 
-    const router = useRouter();
-    function handleClickBack() {
-      router.push("/sign-up/create-workspace/details");
+  function handleClickBack() {
+    router.push("/sign-up/create-workspace/details");
+  }
+
+  async function handleClickContinue() {
+    if (name) {
+      const workspaceName = { name: name };
+      const id = localStorage.getItem("id");
+      await axios.patch(
+        `http://localhost:8080/v1/workspace/${id}`,
+        workspaceName
+      );
+      router.push("/sign-up/invite");
+    } else {
+      setDisplay(true);
     }
-
-    function handleClickContinue() {
-      router.push("/")
-    }
+  }
 
   return (
     <div className="flex flex-col gap-[13px] text-[#171A1F] text-center items-center mx-4">
@@ -38,6 +52,10 @@ const Workspace = () => {
         </div>
         <form>
           <input
+            value={name}
+            onChange={(e) => {
+              setName(() => e.target.value);
+            }}
             type="text"
             placeholder="DokkuAI Inc."
             className="py-[6px] pl-[12px] h-[35px] w-[285px] mb:w-[379px] rounded border-2 border-[#BCC1CA]"
@@ -47,6 +65,11 @@ const Workspace = () => {
           The name of your company or organization
         </div>
       </div>
+      {display ? (
+        <div className="text-[14px] leading-[22px] text-red-500 font-bold">
+          ! Choose a workspace name
+        </div>
+      ) : null}
       <div className="mt-9 flex gap-4 w-[285px] mb:w-[379px]">
         <button
           onClick={handleClickBack}
@@ -63,6 +86,6 @@ const Workspace = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Workspace
+export default Workspace;

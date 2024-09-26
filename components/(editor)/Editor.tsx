@@ -7,6 +7,7 @@ import {
   EditorCommandEmpty,
   EditorContent,
   type JSONContent,
+  type EditorInstance,
   EditorCommandList,
   EditorBubble,
 } from "novel";
@@ -22,6 +23,7 @@ import { handleImageDrop, handleImagePaste } from "novel/plugins";
 import { uploadFn } from "./lib/image-upload";
 import { Separator } from "./components/ui/separator";
 import { MathSelector } from "./components/selectors/math-selector";
+import { useDebouncedCallback } from "use-debounce";
 
 const extensions = [...defaultExtensions, slashCommand];
 
@@ -34,10 +36,18 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
   const [openColor, setOpenColor] = useState(false);
   const [openLink, setOpenLink] = useState(false);
 
+  const debouncedUpdates = useDebouncedCallback(
+    async (editor: EditorInstance) => {
+      const json = editor.getJSON();
+      onChange(json);
+    },
+    3000
+  );
+
   return (
     <EditorRoot>
       <EditorContent
-        className="border p-8 rounded-xl flex-grow"
+        className="border p-8 rounded-xl flex-grow border-gray-800 bg-gray-200 overflow-y-auto"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{
@@ -48,11 +58,11 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
           handleDrop: (view, event, _slice, moved) =>
             handleImageDrop(view, event, moved, uploadFn),
           attributes: {
-            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full h-[500px] hover:border-2 `,
+            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full bg-white min-h-[600px] border-2 border-black`,
           },
         }}
         onUpdate={({ editor }) => {
-          onChange(editor.getJSON());
+          debouncedUpdates(editor);
         }}
         slotAfter={<ImageResizer />}
       >

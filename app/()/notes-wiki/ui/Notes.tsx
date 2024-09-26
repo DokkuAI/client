@@ -1,6 +1,6 @@
 import { Table, TableBody, TableHeader, TableRow } from "@/components/ui/table";
 import HeadCell from "../../ui/HeadCell";
-import Row from "./NotesRow";
+import NotesFiles from "./NotesFiles";
 
 export default function Notes() {
   return (
@@ -19,86 +19,7 @@ export default function Notes() {
       </TableHeader>
 
       <TableBody>
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
-        <Row
-          name="Airsim Simulation Techniques"
-          lastModified="November 21, 2024"
-          linkTo="PANDA: Framework for ..."
-          pages="2000"
-          tags="$250.00"
-          createdBy="November 21, 2024"
-        />
+        <NotesFiles/>
       </TableBody>
     </Table>
   );

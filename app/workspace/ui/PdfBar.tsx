@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function PdfBar() {
   return (
 
-      <div className="h-[56px] w-2/5 flex items-center justify-between px-[16px] gap-[10px] text-[#565E6C] shadow-[0px_0px_]">
+      <div className="h-[56px] w-2/5 flex items-center justify-between px-[16px] gap-[10px] text-[#565E6C] border-2">
         <div className="flex min-w-[164px] items-center gap-[13px]">
           <Image src={SideSectionIcon} alt="Side Section Icon" />
           <Image src={SearchIcon} alt="Side Section Icon" />

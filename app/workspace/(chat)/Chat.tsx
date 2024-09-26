@@ -1,8 +1,4 @@
-import MicrophoneIcon from "@/public/MicrophoneIcon.svg";
-import SendIcon from "@/public/SendIcon.svg";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
-import { Textarea } from "@/components/ui/textarea";
 import { useRef, useState } from "react";
 import Message from "./ui/Message";
 import messages from "./messages";
@@ -15,9 +11,7 @@ import InputBox from "../ui/InputBox";
 
 function Chat() {
     const messageContainer = useRef(null);
-  const { register, handleSubmit } = useForm();
   const [mssg, setMssg] = useState(messages)
-  const onSubmit = (data: any) => setMssg((mssg) => [...mssg, {name: "Devesh Singh", src: "/Devesh.png", content: data.inputText}]);
   return (
     <div className="flex flex-col p-5 w-full gap-3">
       <div
@@ -46,7 +40,7 @@ function Chat() {
           alt="align bottom icon"
         />
       </div>
-      <InputBox placeholder="Ask the document a question..." />
+      <InputBox placeholder="Ask the document a question..." setInput={setMssg}/>
     </div>
   );
 }

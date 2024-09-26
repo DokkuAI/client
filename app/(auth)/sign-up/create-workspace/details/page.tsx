@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Details from "./Details";
-import Skeleton from "../../../../../components/ui/Skeleton";
+import Skeleton from "@/components/ui/Skeleton";
 
 const page = () => {
   return (

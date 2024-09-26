@@ -4,17 +4,23 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
+
 export default function Usage() {
   const [team, setTeam] = useState<boolean>(false);
   const [solo, setSolo] = useState<boolean>(false);
   const [display, setDisplay] = useState<boolean>(false);
   const router = useRouter();
 
-  function handleClick() {
-    if(solo || team){
-        router.push("/sign-u/create-workspce/details")
+  async function handleClick() {
+    if (solo || team) {
+      const workspaceType = {type : solo?"personal":"team"};
+      console.log(workspaceType);
+      const {data} = await axios.post("http://localhost:8080/v1/workspace", workspaceType);
+      localStorage.setItem("id", data._id);
+      router.push("/sign-up/create-workspace/details");
     } else {
-        setDisplay(true);
+      setDisplay(true);
     }
   }
 
@@ -101,8 +107,8 @@ export default function Usage() {
         </div>
       </div>
       {display ? (
-        <div className="text-[14px] leading-[22px] text-red-500 font-normal">
-          ! Choose a workspace
+        <div className="text-[14px] leading-[22px] text-red-500 font-bold">
+          ! Choose a workspace type
         </div>
       ) : null}
 

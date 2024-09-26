@@ -5,11 +5,11 @@ import FilterIcon from "@/public/Filter.svg";
 import ViewIcon from "@/public/View.svg";
 import AllFilesIcon from "@/public/AllFiles.svg";
 import LinkedNotesIcon from "@/public/LinkedNotes.svg";
-import EditIcon from "@/public/Edit.svg";
 
 import Image from "next/image";
 import Button from "../ui/Button";
 import Notes from "./ui/Notes";
+import CreateNote from "./ui/CreateNote";
 
 function page() {
   return (
@@ -26,7 +26,7 @@ function page() {
           </TabsTrigger>
         </TabsList>
         <div className="flex gap-3 items-center">
-          <Button title="Create New" svg={EditIcon} />
+          <CreateNote />
           <Button title="Import" svg={UploadIcon} />
           <Button title="Search" svg={SearchIcon} />
           <Button title="Filters" svg={FilterIcon} />
