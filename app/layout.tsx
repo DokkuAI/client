@@ -1,4 +1,4 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import "./globals.css";
 import "./prosemirror.css"
 import { Manrope } from "next/font/google";
@@ -28,6 +28,7 @@ export default function RootLayout({
         signInFallbackRedirectUrl={'/'}
     >
       <html lang="en">
+        <UserButton/>
         <body className={`${manRope.className} h-auto w-full`}>{children}</body>
       </html>
     </ClerkProvider>

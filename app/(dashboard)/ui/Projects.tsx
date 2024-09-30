@@ -1,6 +1,6 @@
-import { Table, TableBody, TableHeader, TableRow } from '@/components/ui/table'
-import React from 'react'
-import HeadCell from '../../ui/HeadCell';
+import { Table, TableBody, TableHeader, TableRow } from "@/components/ui/table";
+import React from "react";
+import HeadCell from "../../(data-stores)/ui/HeadCell";
 import Row from "./ProjectRow";
 
 const Projects = () => {
@@ -32,6 +32,6 @@ const Projects = () => {
       </TableBody>
     </Table>
   );
-}
+};
 
-export default Projects
+export default Projects;

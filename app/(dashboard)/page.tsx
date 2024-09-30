@@ -1,6 +1,6 @@
 import ActivityIcon from "@/public/Activity.svg";
 import Projects from "./ui/Projects";
-import Button from "../ui/Button";
+import Button from "../(data-stores)/ui/Button";
 import EditIcon from "@/public/Edit.svg";
 import { Log } from "./ui/Log";
 import ProjectCards from "./ui/ProjectCards";
@@ -22,7 +22,7 @@ const page = () => {
             Pinned
           </div>
           <div className="flex gap-5">
-            <ProjectCards pinned={true} />
+            {/* <ProjectCards pinned={true} /> */}
           </div>
         </div>
         <div className="flex flex-col gap-5">
